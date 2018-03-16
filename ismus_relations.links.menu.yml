@@ -1,0 +1,18 @@
+
+# Ismus relation menu items definition
+entity.ismus_relation.collection:
+  title: 'Ismus relation list'
+  route_name: entity.ismus_relation.collection
+  description: 'List Ismus relation entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Ismus relation type menu items definition
+entity.ismus_relation_type.collection:
+  title: 'Ismus relation type'
+  route_name: entity.ismus_relation_type.collection
+  description: 'List Ismus relation type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

@@ -1,0 +1,5 @@
+name: 'Ismus Relations'
+type: module
+description: 'ISMUS Relationship module'
+core: 8.x
+package: 'ismus'

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains ismus_relations.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ismus_relations_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ismus_relations module.
+    case 'help.page.ismus_relations':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ISMUS Relationship module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ismus_relations_theme() {
+  $theme = [];
+  $theme['ismus_relation'] = [
+    'render element' => 'elements',
+    'file' => 'ismus_relation.page.inc',
+    'template' => 'ismus_relation',
+  ];
+  $theme['ismus_relation_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ismus_relation.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function ismus_relations_theme_suggestions_ismus_relation(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#ismus_relation'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ismus_relation__' . $sanitized_view_mode;
+  $suggestions[] = 'ismus_relation__' . $entity->bundle();
+  $suggestions[] = 'ismus_relation__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ismus_relation__' . $entity->id();
+  $suggestions[] = 'ismus_relation__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

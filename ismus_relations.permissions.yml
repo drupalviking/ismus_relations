@@ -1,0 +1,30 @@
+add ismus relation entities:
+  title: 'Create new Ismus relation entities'
+
+administer ismus relation entities:
+  title: 'Administer Ismus relation entities'
+  description: 'Allow to access the administration form to configure Ismus relation entities.'
+  restrict access: true
+
+delete ismus relation entities:
+  title: 'Delete Ismus relation entities'
+
+edit ismus relation entities:
+  title: 'Edit Ismus relation entities'
+
+view published ismus relation entities:
+  title: 'View published Ismus relation entities'
+
+view unpublished ismus relation entities:
+  title: 'View unpublished Ismus relation entities'
+
+view all ismus relation revisions:
+  title: 'View all Ismus relation revisions'
+
+revert all ismus relation revisions:
+  title: 'Revert all Ismus relation revisions'
+  description: 'Role requires permission <em>view Ismus relation revisions</em> and <em>edit rights</em> for ismus relation entities in question or <em>administer ismus relation entities</em>.'
+
+delete all ismus relation revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Ismus relation revisions</em> and <em>delete rights</em> for ismus relation entities in question or <em>administer ismus relation entities</em>.'

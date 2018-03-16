@@ -1,0 +1,22 @@
+{#
+/**
+ * @file ismus_relation.html.twig
+ * Default theme implementation to present Ismus relation data.
+ *
+ * This template is used when viewing Ismus relation pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_ismus_relation()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('ismus_relation') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,11 @@
+entity.ismus_relation.add_form:
+  route_name: entity.ismus_relation.add_page
+  title: 'Add Ismus relation'
+  appears_on:
+    - entity.ismus_relation.collection
+entity.ismus_relation_type.add_form:
+  route_name: entity.ismus_relation_type.add_form
+  title: 'Add Ismus relation type'
+  appears_on:
+    - entity.ismus_relation_type.collection
+
